@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Random number generator</title>
+</head>
+<body>
+  <h1>Random Number Generator</h1>
+
+  <center><input type="text" id="max" placeholder="enter the maximum number to generate"  style="height: 40px; width: 400px; font-size:20px; text-align:center; border: none;"></center>
+  
+  <div class="btn" >
+    <button id="btn" onclick="c()">Generate a Number!</button>
+  </div>
+
+  <div class="text">
+<h2 id="text"></h2>
+  </div>
+  <script> document.getElementById("text").style.display = 'none';
+
+    function c() {
+        document.getElementById("text").style.display = 'block';
+        var v = document.getElementById("max").value;
+        var x = 1;
+        var y = Number(v)+Number(x);
+        document.getElementById("text").innerHTML = Math.floor(Math.random() * y);
+    }
+    </script>
+
+    <style>
+      * {
+    margin:0px;
+    padding: 0px;
+}
+
+#btn {
+    border-radius: 15px;
+    height: 70px;
+    width: 300px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 20px;
+    transition: 3ms ease;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+#btn:hover{
+    box-shadow: 0 0 20px grey;
+}
+
+#text {
+    border: 5px solid black;
+    border-radius: 15px;
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+    margin-top: 20px;
+}
+    </style>
+</body>
+</html>
